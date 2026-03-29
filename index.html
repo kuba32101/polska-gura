@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>kasyno</title>
+	<style>
+		@font-face {
+			font-family: 'grafit';
+			src: url('SpriteGraffiti-Regular.ttf') format('truetype');
+		}
+		body {
+			text-align: center;
+			background-color: #6e6e6e;
+			margin: 0;
+			font-family: grafit;
+			max-height: 300vh;
+			height: 250vh;
+		}
+		.napis {
+			margin-top: 20px;
+			color: white;
+			font-size: 50vh;
+			font-weight: normal;
+			position: relative;
+			top: -0vh;
+			margin: 0;
+			text-shadow:
+				-3px -3px 0 #000,  
+				3px -3px 0 #000,
+				-3px  3px 0 #000,
+				3px  3px 0 #000;
+		}
+		#btn {
+			height: 100px;
+			width: 400px;
+			position: relative;
+			top: -0vh;
+			font-size: 40px;
+			border: solid black 2px;
+			font-family: grafit;
+		}
+		#btn:hover {
+			cursor: pointer;
+		}
+		#alert {
+			position: fixed; 
+			top: 90%;
+			left: 10%;
+			transform: translate(-50%, -50%);
+			width: 290px;
+			height: 150px;
+			padding: 20px;
+			border-radius: 15px;
+			border: solid black 2px;
+			background-color: white;
+			z-index: 9999;
+			font-size: 20px;
+		}
+		#wiem {
+			width: 150px;
+			height: 40px;
+			font-family: grafit;
+			font-size: 25px;
+			border: solid black 2px;
+		}
+		#wiem:hover {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="napis">Polska górą inni dołem</h1>
+	<button id="btn">Aktywuj system Windows</button>
+	<div id="alert">
+		<h2>Nie masz klucza haha</h2>
+		<button id="wiem">Wiem xd</button>
+	</div>
+	<script>
+		const btn = document.getElementById("btn");
+		const wiem = document.getElementById("wiem");
+		const alertd = document.getElementById("alert");
+		
+		alertd.style.display = "none";
+		
+		btn.addEventListener('click', () => {
+			alertd.style.display = "inline-block";
+		});
+		wiem.addEventListener('click', () => {
+			alertd.style.display = "none";
+		});
+	</script>
+</body>
+</html>
